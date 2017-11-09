@@ -13,6 +13,7 @@ class VCDetail: UIViewController {
     @IBOutlet weak var nomAffiche: UILabel!
     @IBOutlet weak var imageAffiche: UIImageView!
     @IBOutlet weak var descriptionAffiche: UITextView!
+    @IBOutlet weak var detailBackground: UIImageView!
     
     @IBAction func retourALaListe(_ sender: Any) {
         dismiss(animated: true, completion: nil)
@@ -28,6 +29,7 @@ class VCDetail: UIViewController {
         nomAffiche.text         = informationsDeLafficheCourant[0]
         imageAffiche.image      = UIImage(named: informationsDeLafficheCourant[1])
         descriptionAffiche.text = informationsDeLafficheCourant[2]
+        detailBackground.image  = UIImage(named: informationsDeLafficheCourant[1])
         
     }//viewDidLoad
 

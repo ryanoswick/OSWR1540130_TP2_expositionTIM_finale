@@ -21,7 +21,6 @@ class ViewController: UIViewController, UICollectionViewDataSource {
         //charger les données du tableau
         let pathFichierPlist = Bundle.main.path(forResource: "lesDonnes", ofType: "plist")!
         tableauDonnees = NSArray(contentsOfFile: pathFichierPlist) as! Array
-        
     }//viewDidLoad()
     
     // MARK: - Les méthodes de protocoles de UICollectionView
@@ -33,25 +32,22 @@ class ViewController: UIViewController, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         var celluleCourante:CVCAffiche
         
-        
         celluleCourante = collectionView.dequeueReusableCell(withReuseIdentifier: "modeleCelluleAffiche", for:indexPath) as! CVCAffiche
-        
         celluleCourante.afficheImage.image = UIImage(named: tableauDonnees[(indexPath as NSIndexPath).row][1])
+        celluleCourante.afficheTitle.text = tableauDonnees[(indexPath as NSIndexPath).row][0]
         
         return celluleCourante
+    
     }//cellForItemAt indexPath
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }//didReceiveMemoryWarning()
 
     // Méthode exécutée automatiquement avant un segue
     
     //MARK:- Préparer le déplacement (segue)
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Note: Il faut avoir renseigné un @IBOutlet sur le UICollectionView
-        
         // 1 - Déterminer l'index de la sélection à partir de la cellule reçue en paramètre (sender)
         let selection = CVAffiche.indexPath(for: sender as! UICollectionViewCell)!.row
         print("# Exécution de la méthode: prepareForSegue pour la cellule numéro: \(selection)\n")

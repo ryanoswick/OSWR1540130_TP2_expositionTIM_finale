@@ -63,10 +63,18 @@
                                                     <rect key="frame" x="-9" y="0.0" width="232" height="257"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Titre" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aDi-Im-PCU">
+                                                    <rect key="frame" x="15" y="227" width="193" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                         </view>
                                         <connections>
                                             <outlet property="afficheImage" destination="No5-M3-p5P" id="EBQ-oG-XwI"/>
+                                            <outlet property="afficheTitle" destination="aDi-Im-PCU" id="nIW-8Q-F69"/>
                                             <segue destination="DoV-nE-W4v" kind="modal" id="e8Q-Md-m3Y"/>
                                         </connections>
                                     </collectionViewCell>
@@ -108,7 +116,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="117.08633093525181" y="117.98561151079137"/>
+            <point key="canvasLocation" x="116.54676258992806" y="117.62589928057554"/>
         </scene>
         <!--Details-->
         <scene sceneID="Yf8-w5-weE">
@@ -128,16 +136,16 @@
                                 <rect key="frame" x="0.0" y="0.0" width="834" height="1112"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="pub01.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="k4W-bh-N3p">
-                                        <rect key="frame" x="79" y="371" width="279" height="372"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="frame05.png" translatesAutoresizingMaskIntoConstraints="NO" id="nBJ-Go-1ea">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="pub02.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="nBJ-Go-1ea">
                                         <rect key="frame" x="45" y="327" width="348" height="459"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="frame05.png" translatesAutoresizingMaskIntoConstraints="NO" id="k4W-bh-N3p">
+                                        <rect key="frame" x="28" y="290" width="399" height="512"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="htZ-U6-juh">
-                                        <rect key="frame" x="423" y="342" width="332" height="433"/>
+                                        <rect key="frame" x="472" y="327" width="332" height="433"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
@@ -145,17 +153,16 @@
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Titre Affiche" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lgo-z6-a5C">
-                                        <rect key="frame" x="0.0" y="173" width="834" height="66"/>
+                                        <rect key="frame" x="0.0" y="91" width="834" height="66"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="41"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kb6-d7-JHA">
-                                        <rect key="frame" x="20" y="60" width="119" height="90"/>
+                                        <rect key="frame" x="90" y="351" width="275" height="400"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="37"/>
-                                        <state key="normal" title="&lt;"/>
                                         <connections>
                                             <action selector="retourALaListe:" destination="DoV-nE-W4v" eventType="touchUpInside" id="LJ6-PQ-6eh"/>
                                         </connections>
@@ -169,18 +176,20 @@
                     </view>
                     <connections>
                         <outlet property="descriptionAffiche" destination="htZ-U6-juh" id="Vtc-dm-VDi"/>
+                        <outlet property="detailBackground" destination="55k-eq-YtQ" id="d2A-XS-M87"/>
                         <outlet property="imageAffiche" destination="nBJ-Go-1ea" id="JKI-gN-8EZ"/>
                         <outlet property="nomAffiche" destination="lgo-z6-a5C" id="C1P-mt-rCU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8nH-lM-qrU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="965" y="118"/>
+            <point key="canvasLocation" x="964.74820143884904" y="117.62589928057554"/>
         </scene>
     </scenes>
     <resources>
         <image name="brick01.jpg" width="1280" height="876"/>
         <image name="frame05.png" width="500" height="665"/>
         <image name="pub01.jpg" width="347" height="450"/>
+        <image name="pub02.jpg" width="600" height="800"/>
     </resources>
 </document>
