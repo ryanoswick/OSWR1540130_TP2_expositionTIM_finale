@@ -15,13 +15,24 @@ class ViewController: UIViewController, UICollectionViewDataSource {
     
     @IBOutlet weak var CVAffiche: UICollectionView!
     
+    @IBOutlet weak var messageNBAffiches: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //Timer.scheduledTimer(timeInterval: 0.01, target: self, selector: #selector(passerAuMenuPrincipal), userInfo: nil, repeats: false)
+        print("timer marche")
         
         //charger les données du tableau
         let pathFichierPlist = Bundle.main.path(forResource: "lesDonnes", ofType: "plist")!
         tableauDonnees = NSArray(contentsOfFile: pathFichierPlist) as! Array
+        
+        //le message pour le nombre d'affiches
+        messageNBAffiches.text = "Il y a " + String(tableauDonnees.count) + " affiches dans la collection"
     }//viewDidLoad()
+    
+    //@objc func passerAuMenuPrincipal(){
+        //performSegue(withIdentifier: "versAffiche", sender: self)
+    //} // passerAuMenuPrincipal
     
     // MARK: - Les méthodes de protocoles de UICollectionView
     
