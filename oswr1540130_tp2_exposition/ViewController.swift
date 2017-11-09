@@ -13,26 +13,20 @@ class ViewController: UIViewController, UICollectionViewDataSource {
     //tableau des données pour les affiches
     var tableauDonnees = [Array<String>]()
     
+    //declarations IBOutlets
     @IBOutlet weak var CVAffiche: UICollectionView!
-    
     @IBOutlet weak var messageNBAffiches: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        //Timer.scheduledTimer(timeInterval: 0.01, target: self, selector: #selector(passerAuMenuPrincipal), userInfo: nil, repeats: false)
-        print("timer marche")
         
         //charger les données du tableau
         let pathFichierPlist = Bundle.main.path(forResource: "lesDonnes", ofType: "plist")!
         tableauDonnees = NSArray(contentsOfFile: pathFichierPlist) as! Array
         
         //le message pour le nombre d'affiches
-        messageNBAffiches.text = "Il y a " + String(tableauDonnees.count) + " affiches dans la collection"
+        messageNBAffiches.text = "Il y a " + String(tableauDonnees.count) + " affiches dans la collection."
     }//viewDidLoad()
-    
-    //@objc func passerAuMenuPrincipal(){
-        //performSegue(withIdentifier: "versAffiche", sender: self)
-    //} // passerAuMenuPrincipal
     
     // MARK: - Les méthodes de protocoles de UICollectionView
     
@@ -48,7 +42,6 @@ class ViewController: UIViewController, UICollectionViewDataSource {
         celluleCourante.afficheTitle.text = tableauDonnees[(indexPath as NSIndexPath).row][0]
         
         return celluleCourante
-    
     }//cellForItemAt indexPath
 
     override func didReceiveMemoryWarning() {
@@ -59,15 +52,16 @@ class ViewController: UIViewController, UICollectionViewDataSource {
     
     //MARK:- Préparer le déplacement (segue)
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
         // 1 - Déterminer l'index de la sélection à partir de la cellule reçue en paramètre (sender)
         let selection = CVAffiche.indexPath(for: sender as! UICollectionViewCell)!.row
-        print("# Exécution de la méthode: prepareForSegue pour la cellule numéro: \(selection)\n")
+        
         // 2 - Créer un objet pointant sur l'instance de classe de la destination
         let destination = segue.destination as! VCDetail
         
         // 3 - Passer les informations au controleur de destination
         destination.informationsDeLafficheCourant = tableauDonnees[selection]
     } // prepare(for segue: ...)
-    
+
 }//viewController
 

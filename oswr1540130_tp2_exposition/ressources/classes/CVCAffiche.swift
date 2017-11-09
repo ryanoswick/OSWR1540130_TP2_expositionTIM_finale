@@ -12,4 +12,4 @@ class CVCAffiche: UICollectionViewCell {
     
     @IBOutlet weak var afficheImage: UIImageView!
     @IBOutlet weak var afficheTitle: UILabel!
-}
+}//CVCAffiche

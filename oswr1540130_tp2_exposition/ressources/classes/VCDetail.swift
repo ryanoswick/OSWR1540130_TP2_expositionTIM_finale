@@ -10,6 +10,7 @@ import UIKit
 
 class VCDetail: UIViewController {
 
+    //déclarations des IBOutlets
     @IBOutlet weak var nomAffiche: UILabel!
     @IBOutlet weak var imageAffiche: UIImageView!
     @IBOutlet weak var descriptionAffiche: UITextView!
@@ -24,7 +25,6 @@ class VCDetail: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("# Nous avons reçu les données suivantes:\(informationsDeLafficheCourant)\n")
         
         nomAffiche.text         = informationsDeLafficheCourant[0]
         imageAffiche.image      = UIImage(named: informationsDeLafficheCourant[1])
@@ -35,7 +35,6 @@ class VCDetail: UIViewController {
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        
     }//didReceiveMemoryWarning()
 
 }//VCDetail

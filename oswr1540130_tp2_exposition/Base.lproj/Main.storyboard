@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="wRG-UA-Cpy">
     <device id="ipad10_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -12,7 +12,7 @@
         <!--Splash-->
         <scene sceneID="MF1-ZK-2aT">
             <objects>
-                <viewController id="wRG-UA-Cpy" userLabel="Splash" sceneMemberID="viewController">
+                <viewController id="wRG-UA-Cpy" userLabel="Splash" customClass="splashScreen" customModule="oswr1540130_tp2_exposition" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Wgh-ba-bzr">
                         <rect key="frame" x="0.0" y="0.0" width="834" height="1112"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -75,7 +75,7 @@
                         <viewLayoutGuide key="safeArea" id="6A0-Jn-pfO"/>
                     </view>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="modal" identifier="versAffiche" id="ttp-1K-UdR"/>
+                        <segue destination="BYZ-38-t0r" kind="modal" identifier="versAffiche" modalPresentationStyle="fullScreen" id="ttp-1K-UdR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vV5-lS-JDJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
